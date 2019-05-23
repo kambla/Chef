@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Chef</string>
+    <string name="action_settings">Settings</string>
+    <string name="ingredients_input_field_hint">Provide your ingredients</string>
+    <string name="recipeCount_text_label">Number of search results: </string>
+    <string name="preparationTime_text_label">Dish preparation time [min]: </string>
+    <string name="button_search_label">Search for recipes</string>
+    <string-array name="recipeCount_spinner_data">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="preparationTime_spinner_data">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>110</item>
+        <item>120</item>
+    </string-array>
+    <string name="title_activity_recipes_list">RecipesListActivity</string>
+    <string name="title_activity_recipe_detail">RecipeDetailActivity</string>
+    <string name="preparation_details_disclaimer">Preparation details, please see: </string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="password_hint">Password</string>
+    <string name="email_hint">Email</string>
+    <string name="singIn_button_label">Sign in</string>
+    <string name="button_register_label">Register</string>
+    <string name="Continue_without_signing">Continue without signing in</string>
+</resources>

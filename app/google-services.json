@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "106061163068",
+    "firebase_url": "https://chef-93062.firebaseio.com",
+    "project_id": "chef-93062",
+    "storage_bucket": "chef-93062.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106061163068:android:88389bab11ed7fbe",
+        "android_client_info": {
+          "package_name": "com.example.chef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106061163068-e288d8hronc4j56m1jgdhti3rl5q6h22.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXGYaehBZMqbPXLmA8Dt-lPYcO6yw_WLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106061163068-e288d8hronc4j56m1jgdhti3rl5q6h22.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
