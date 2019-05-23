@@ -6,8 +6,13 @@ You don't need to worry about the food stucked in your fridge and spend time fig
 With chef you can easily find the best recipes for your ingredients and optimize your search results.
 
 App features:
+
 *Recipe search based on ingredients.
+
 *Search optimization with parameters.
+
 *Account registration.
+
 *Favorite recipe list for registered users.
+
 *Google maps assistence in case of missing ingredients.
