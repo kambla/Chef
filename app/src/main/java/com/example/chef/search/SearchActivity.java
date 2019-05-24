@@ -1,5 +1,6 @@
 package com.example.chef.search;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -14,13 +15,17 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.chef.R;
+import com.example.chef.user.UserInfoActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
+public class SearchActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
 
     private String mQueryIngredients = "";
     private List<String> mIngredients;
@@ -28,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_search);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         Spinner recipeCountSpinner = findViewById(R.id.recipeCount_spinner);
@@ -71,8 +76,17 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_user_info) {
+            FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+            if(currentUser == null) {
+                displayToast("You are not logged in!");
+                return true;
+            }
+            else{
+                Intent intent = new Intent(this, UserInfoActivity.class);
+                startActivity(intent);
+            }
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -93,5 +107,8 @@ public class MainActivity extends AppCompatActivity implements TextView.OnEditor
         new RecipesSearchTask(getApplicationContext()).execute(new RecipesSearch(mIngredients,5,60));
     }
 
+    public void displayToast(String message){
+        Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
+    }
 
 }
