@@ -20,7 +20,7 @@ import com.example.chef.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
+public class SearchActivity extends AppCompatActivity implements TextView.OnEditorActionListener {
 
     private String mQueryIngredients = "";
     private List<String> mIngredients;
